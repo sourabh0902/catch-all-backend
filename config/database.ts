@@ -3,7 +3,9 @@ import type { Core } from '@strapi/strapi';
 import { parse } from 'pg-connection-string';
 
 const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Database => {
-  if (env('NODE_ENV') === 'production') {
+  const client = env('DATABASE_CLIENT', 'sqlite');
+
+  if (client === 'postgres') {
     const parsedConfig = parse(env('DATABASE_URL'));
     return {
       connection: {
@@ -21,7 +23,7 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Database 
     };
   }
 
-  // Keep SQLite for local development
+  // Fallback to SQLite
   return {
     connection: {
       client: 'sqlite',

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_quotes",
+  "info": {
+    "displayName": "quote",
+    "icon": "quote"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    },
+    "author": {
+      "type": "string",
+      "default": "Tracey Wilson"
+    }
+  },
+  "config": {}
+}

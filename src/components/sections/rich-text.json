@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_sections_rich_texts",
+  "info": {
+    "displayName": "rich-text",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}
